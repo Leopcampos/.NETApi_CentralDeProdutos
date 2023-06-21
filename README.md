@@ -1,3 +1,3 @@
 # .NETApi_CentralDeProdutos
 
-Categoria Hexagonal
+Arquitetura Hexagonal
