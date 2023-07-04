@@ -2,8 +2,7 @@
 
 namespace CentralDeProdutos.Domain.Interfaces
 {
-    public interface ICategoriaDomainService : IBaseDomainService
-        <Categoria, Guid>
+    public interface ICategoriaDomainService : IBaseDomainService<Categoria, Guid>
     {
     }
 }
