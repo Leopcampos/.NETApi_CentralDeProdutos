@@ -1,4 +1,6 @@
 ﻿using CentralDeProdutos.Domain.Ports.Repositories;
+using CentralDeProdutos.Infra.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace CentralDeProdutos.Infra.Data.Repositories
 {
@@ -8,34 +10,44 @@ namespace CentralDeProdutos.Infra.Data.Repositories
     public abstract class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, TKey>
         where TEntity : class
     {
+        private readonly DataContext _dataContext;
+
+        protected BaseRepository(DataContext? dataContext)
+        {
+            _dataContext = dataContext;
+        }
+
         public virtual void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dataContext.Add(entity);
+            _dataContext.SaveChanges();
         }
 
         public virtual void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dataContext.Entry(entity).State = EntityState.Modified;
+            _dataContext.SaveChanges();
         }
 
         public virtual void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dataContext.Remove(entity);
+            _dataContext.SaveChanges();
         }
 
         public virtual List<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _dataContext.Set<TEntity>().ToList();
         }
 
         public virtual TEntity GetById(TKey id)
         {
-            throw new NotImplementedException();
+            return _dataContext.Set<TEntity>().Find(id);
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _dataContext.Dispose();
         }
     }
 }
