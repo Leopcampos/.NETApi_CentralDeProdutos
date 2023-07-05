@@ -1,4 +1,5 @@
-﻿using Xunit;
+using Xunit;
+
 namespace CentralDeProdutos.IntegrationTests
 {
     public class CategoriasTest
@@ -6,6 +7,7 @@ namespace CentralDeProdutos.IntegrationTests
         [Fact]
         public void Test1()
         {
+
         }
     }
 }

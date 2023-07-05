@@ -7,6 +7,7 @@ namespace CentralDeProdutos.IntegrationTests
         [Fact]
         public void Test1()
         {
+
         }
     }
 }

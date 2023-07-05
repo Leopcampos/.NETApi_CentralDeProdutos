@@ -7,14 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Mappings\**" />
-    <EmbeddedResource Remove="Mappings\**" />
-    <None Remove="Mappings\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.3" />
   </ItemGroup>
 
   <ItemGroup>
