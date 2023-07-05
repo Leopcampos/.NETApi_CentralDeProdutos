@@ -1,16 +1,21 @@
 ﻿using CentralDeProdutos.Domain.Ports.Repositories;
 using CentralDeProdutos.Infra.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Infra.Data.Repositories
 {
     /// <summary>
-    /// Classe base dos reposit[orios
+    /// Classe base dos repositórios
     /// </summary>
     public abstract class BaseRepository<TEntity, TKey> : IBaseRepository<TEntity, TKey>
         where TEntity : class
     {
-        private readonly DataContext _dataContext;
+        private readonly DataContext? _dataContext;
 
         protected BaseRepository(DataContext? dataContext)
         {
@@ -45,7 +50,7 @@ namespace CentralDeProdutos.Infra.Data.Repositories
             return _dataContext.Set<TEntity>().Find(id);
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             _dataContext.Dispose();
         }

@@ -1,14 +1,19 @@
 ﻿using CentralDeProdutos.Domain.Interfaces;
 using CentralDeProdutos.Domain.Ports.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Domain.Services
 {
-    public abstract class BaseDomainService<TEntity, Tkey> : IBaseDomainService<TEntity, Tkey>
+    public abstract class BaseDomainService<TEntity, TKey> : IBaseDomainService<TEntity, TKey>
         where TEntity : class
     {
-        private readonly IBaseRepository<TEntity, Tkey>? _baseRepository;
+        private readonly IBaseRepository<TEntity, TKey>? _baseRepository;
 
-        protected BaseDomainService(IBaseRepository<TEntity, Tkey>? baseRepository)
+        protected BaseDomainService(IBaseRepository<TEntity, TKey>? baseRepository)
         {
             _baseRepository = baseRepository;
         }
@@ -33,7 +38,7 @@ namespace CentralDeProdutos.Domain.Services
             return _baseRepository.GetAll();
         }
 
-        public virtual TEntity GetById(Tkey id)
+        public virtual TEntity GetById(TKey id)
         {
             return _baseRepository.GetById(id);
         }

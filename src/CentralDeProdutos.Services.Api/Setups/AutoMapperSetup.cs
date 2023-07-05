@@ -1,7 +1,14 @@
-﻿namespace CentralDeProdutos.Services.Api.Setups
+﻿using Microsoft.AspNetCore.Builder;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CentralDeProdutos.Services.Api.Setups
 {
     /// <summary>
-    /// Configuração do AutoMapper
+    /// Configuração para o AutoMapper
     /// </summary>
     public class AutoMapperSetup
     {

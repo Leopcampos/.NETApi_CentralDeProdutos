@@ -4,15 +4,20 @@ using CentralDeProdutos.Application.Ports;
 using CentralDeProdutos.Application.Queries;
 using CentralDeProdutos.Domain.Interfaces;
 using CentralDeProdutos.Domain.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Application.Services
 {
     public class CategoriaAppService : ICategoriaAppService
     {
         private readonly ICategoriaDomainService? _categoriaDomainService;
-        private readonly IMapper? _mapper;
+        private readonly IMapper _mapper;
 
-        public CategoriaAppService(ICategoriaDomainService categoriaDomainService, IMapper mapper)
+        public CategoriaAppService(ICategoriaDomainService? categoriaDomainService, IMapper mapper)
         {
             _categoriaDomainService = categoriaDomainService;
             _mapper = mapper;

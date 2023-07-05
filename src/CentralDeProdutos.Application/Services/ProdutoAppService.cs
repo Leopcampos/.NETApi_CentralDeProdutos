@@ -4,6 +4,11 @@ using CentralDeProdutos.Application.Ports;
 using CentralDeProdutos.Application.Queries;
 using CentralDeProdutos.Domain.Interfaces;
 using CentralDeProdutos.Domain.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Application.Services
 {
@@ -12,7 +17,7 @@ namespace CentralDeProdutos.Application.Services
         private readonly IProdutoDomainService? _produtoDomainService;
         private readonly IMapper? _mapper;
 
-        public ProdutoAppService(IProdutoDomainService produtoDomainService, IMapper? mapper)
+        public ProdutoAppService(IProdutoDomainService? produtoDomainService, IMapper? mapper)
         {
             _produtoDomainService = produtoDomainService;
             _mapper = mapper;
