@@ -1,11 +1,6 @@
 ﻿using CentralDeProdutos.Domain.Ports.Repositories;
 using CentralDeProdutos.Infra.Data.Contexts;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Infra.Data.Repositories
 {

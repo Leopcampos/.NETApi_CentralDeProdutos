@@ -5,11 +5,6 @@ using CentralDeProdutos.Domain.Ports.Repositories;
 using CentralDeProdutos.Domain.Services;
 using CentralDeProdutos.Infra.Data.Contexts;
 using CentralDeProdutos.Infra.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Services.Api.Setups
 {
