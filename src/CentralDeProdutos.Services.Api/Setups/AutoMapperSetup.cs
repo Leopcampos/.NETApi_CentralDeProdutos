@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CentralDeProdutos.Services.Api.Setups
+﻿namespace CentralDeProdutos.Services.Api.Setups
 {
     /// <summary>
     /// Configuração para o AutoMapper

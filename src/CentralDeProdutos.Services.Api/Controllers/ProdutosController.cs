@@ -1,7 +1,6 @@
 ﻿using CentralDeProdutos.Application.Commands;
 using CentralDeProdutos.Application.Ports;
 using CentralDeProdutos.Application.Queries;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CentralDeProdutos.Services.Api.Controllers
