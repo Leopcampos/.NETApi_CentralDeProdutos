@@ -1,3 +1,5 @@
-# .NETApi_CentralDeProdutos
+# Central De Produtos
 
-Arquitetura Hexagonal
+Arquitetura Hexagonal e Event Driven Design
+
+.NET 7
