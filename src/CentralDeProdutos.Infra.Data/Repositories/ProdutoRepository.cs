@@ -1,6 +1,7 @@
 ﻿using CentralDeProdutos.Domain.Models;
 using CentralDeProdutos.Domain.Ports.Repositories;
 using CentralDeProdutos.Infra.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace CentralDeProdutos.Infra.Data.Repositories
 {
@@ -20,8 +21,15 @@ namespace CentralDeProdutos.Infra.Data.Repositories
         public List<Produto> GetByCategoria(Guid categoriaId)
         {
             return _dataContext.Produtos
-                .Where(p => p.CategoriaId == categoriaId)
-                .ToList();
+            .Include(p => p.Categoria)
+            .Where(p => p.CategoriaId == categoriaId)
+            .ToList();
+        }
+        public override Produto GetById(Guid id)
+        {
+            return _dataContext.Produtos
+            .Include(p => p.Categoria)
+            .FirstOrDefault(p => p.Id == id);
         }
     }
 }

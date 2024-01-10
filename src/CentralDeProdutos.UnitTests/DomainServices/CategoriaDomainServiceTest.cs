@@ -1,31 +1,31 @@
 ﻿using Xunit;
 
-namespace CentralDeProdutos.IntegrationTests
+namespace CentralDeProdutos.UnitTests.DomainServices
 {
-    public class ProdutosTest
+    public class CategoriaDomainServiceTest
     {
         [Fact(Skip = "Não implementado.")]
-        public void Test_Produtos_Post_Returns_Created()
+        public void Test_Add_Categoria()
         {
         }
 
         [Fact(Skip = "Não implementado.")]
-        public void Test_Produtos_Put_Returns_Ok()
+        public void Test_Update_Categoria()
         {
         }
 
         [Fact(Skip = "Não implementado.")]
-        public void Test_Produtos_Delete_Returns_Ok()
+        public void Test_Delete_Categoria()
         {
         }
 
         [Fact(Skip = "Não implementado.")]
-        public void Test_Produtos_GetByCategoria_Returns_Ok()
+        public void Test_GetAll_Categorias()
         {
         }
 
         [Fact(Skip = "Não implementado.")]
-        public void Test_Produtos_GetById_Returns_Ok()
+        public void Test_GetByIdCategoria()
         {
         }
     }

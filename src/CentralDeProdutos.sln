@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driving (Adaptadores primá
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driven (Adaptadores secundários)", "Driven (Adaptadores secundários)", "{F3E0BDE6-CA8B-4D88-AA7A-9A0693FF28DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralDeProdutos.UnitTests", "CentralDeProdutos.UnitTests\CentralDeProdutos.UnitTests.csproj", "{009C48FA-3894-413A-8933-0DB1AD9BFC00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CentralDeProdutos.UnitTests", "CentralDeProdutos.UnitTests\CentralDeProdutos.UnitTests.csproj", "{009C48FA-3894-413A-8933-0DB1AD9BFC00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
