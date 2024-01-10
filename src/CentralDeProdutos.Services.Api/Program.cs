@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 //adicionando as configurações
-AutoMapperSetup.Configure(builder);
 CorsSetup.Configure(builder);
 DependencyInjectionSetup.Configure(builder);
+AutoMapperSetup.Configure(builder);
 SwaggerSetup.Configure(builder);
 
 var app = builder.Build();

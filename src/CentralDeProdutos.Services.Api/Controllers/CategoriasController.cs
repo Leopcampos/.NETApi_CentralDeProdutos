@@ -20,35 +20,36 @@ namespace CentralDeProdutos.Services.Api.Controllers
         [ProducesResponseType(typeof(CategoriasQuery), 201)]
         public IActionResult Post(CreateCategoriaCommand command)
         {
-            return Ok();
+            return StatusCode(201, _categoriaAppService.Add(command));
         }
 
         [HttpPut]
         [ProducesResponseType(typeof(CategoriasQuery), 200)]
         public IActionResult Put(UpdateCategoriaCommand command)
         {
-            return Ok();
+            return Ok(_categoriaAppService.Update(command));
         }
 
         [HttpDelete("{id}")]
         [ProducesResponseType(typeof(CategoriasQuery), 200)]
         public IActionResult Delete(Guid? id)
         {
-            return Ok();
+            var command = new DeleteCategoriaCommand { Id = id };
+            return Ok(_categoriaAppService.Delete(command));
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(List<CategoriasQuery>), 200)]
         public IActionResult GetAll()
         {
-            return Ok();
+            return Ok(_categoriaAppService.GetAll());
         }
 
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(CategoriasQuery), 200)]
         public IActionResult GetById(Guid? id)
         {
-            return Ok();
+            return Ok(_categoriaAppService.GetById(id));
         }
     }
 }

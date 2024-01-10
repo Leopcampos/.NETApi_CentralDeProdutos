@@ -4,11 +4,6 @@ using CentralDeProdutos.Application.Ports;
 using CentralDeProdutos.Application.Queries;
 using CentralDeProdutos.Domain.Interfaces;
 using CentralDeProdutos.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Application.Services
 {

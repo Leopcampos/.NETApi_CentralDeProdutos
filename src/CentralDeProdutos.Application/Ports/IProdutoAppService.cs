@@ -1,10 +1,5 @@
 ﻿using CentralDeProdutos.Application.Commands;
 using CentralDeProdutos.Application.Queries;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralDeProdutos.Application.Ports
 {
@@ -14,7 +9,7 @@ namespace CentralDeProdutos.Application.Ports
         ProdutosQuery Update(UpdateProdutoCommand command);
         ProdutosQuery Delete(DeleteProdutoCommand command);
 
-        List<ProdutosQuery> GetAll();
+        List<ProdutosQuery> GetByCategoria(Guid? idCategoria);
         ProdutosQuery GetById(Guid? id);
     }
 }
